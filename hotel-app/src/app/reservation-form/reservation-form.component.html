@@ -1,0 +1,142 @@
+<div class="container">
+  <app-home></app-home>
+  <div class="card mt-3">
+    <div class="card-title">
+      <h2 class="text-center">New reservation</h2>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+        <div class="d-flex flex-column my-3">
+          <div class="p-2">
+            <div class="input-group mb-3">
+              <label class="input-group-text" id="checkInDate"
+                >Check-In Date:</label
+              >
+              <input
+                formControlName="checkIn"
+                type="date"
+                class="form-control"
+                aria-describedby="checkInDate"
+              />
+            </div>
+            <div
+              *ngIf="
+                reservationForm.get('checkIn')?.invalid &&
+                reservationForm.get('checkIn')?.touched
+              "
+            >
+              <span class="text-danger">Field 'Check-In' is required</span>
+            </div>
+          </div>
+
+          <div class="p-2">
+            <div class="input-group mb-3">
+              <label class="input-group-text" id="checkOutDate"
+                >Check-Out Date:</label
+              >
+              <input
+                formControlName="checkOut"
+                type="date"
+                class="form-control"
+                aria-describedby="checkOutDate"
+              />
+            </div>
+            <div
+              *ngIf="
+                reservationForm.get('checkOut')?.invalid &&
+                reservationForm.get('checkOut')?.touched
+              "
+            >
+              <span class="text-danger">Field 'Check-Out' is required</span>
+            </div>
+          </div>
+
+          <div class="p-2">
+            <div class="input-group mb-3">
+              <label
+                class="input-group-text"
+                id="guestName"
+                placeholder="Guest Name"
+                aria-label="Guest Name"
+                >Guest Name:</label
+              >
+              <input
+                formControlName="guestName"
+                type="text"
+                class="form-control"
+                aria-describedby="guestName"
+              />
+            </div>
+            <div
+              *ngIf="
+                reservationForm.get('guestName')?.invalid &&
+                reservationForm.get('guestName')?.touched
+              "
+            >
+              <span class="text-danger">Field 'Guest Name' is required</span>
+            </div>
+          </div>
+
+          <div class="p-2">
+            <div class="input-group mb-3">
+              <label
+                class="input-group-text"
+                id="guestEmail"
+                placeholder="Guest Email"
+                aria-label="Guest Email"
+                >Guest Email:</label
+              >
+              <input
+                formControlName="guestEmail"
+                type="email"
+                class="form-control"
+                aria-describedby="guestEmail"
+              />
+            </div>
+            <div
+              *ngIf="
+                reservationForm.get('guestEmail')?.invalid &&
+                reservationForm.get('guestEmail')?.touched
+              "
+            >
+              <span class="text-danger">Field 'Guest Email' is required</span>
+            </div>
+          </div>
+
+          <div class="p-2">
+            <div class="input-group mb-3">
+              <label
+                class="input-group-text"
+                id="roomNumber"
+                placeholder="Room Number"
+                aria-label="Room Number"
+                >Room Number:</label
+              >
+              <input
+                formControlName="roomNumber"
+                type="number"
+                class="form-control"
+                aria-describedby="roomNumber"
+              />
+            </div>
+            <div
+              *ngIf="
+                reservationForm.get('roomNumber')?.invalid &&
+                reservationForm.get('roomNumber')?.touched
+              "
+            >
+              <span class="text-danger">Field 'Room number' is required</span>
+            </div>
+          </div>
+        </div>
+        <button
+          class="btn btn-success"
+          type="submit"
+          [disabled]="reservationForm.invalid"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

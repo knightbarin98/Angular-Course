@@ -1,0 +1,223 @@
+{
+  "uuid": "1e519b83-ac1f-473e-bcec-67f3c89a95b6",
+  "lastMigration": 28,
+  "name": "Hotel app",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "39cbde7d-4937-4387-8add-62f0f98d3810",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "reservations",
+      "responses": [
+        {
+          "uuid": "870c6ee1-77be-4373-aeed-b72f2b7ec806",
+          "body": "[\n  {\n    \"id\": 1,\n    \"guestName\": \"Ivan Lopez\",\n    \"guestEmail\": \"ivan@test.com\",\n    \"roomNumber\": 100,\n    \"checkInDate\": \"2023-08-08\",\n    \"checkOutDate\": \"2023-08-10\"\n  },\n  {\n    \"id\": 2,\n    \"guestName\": \"Lisset Lopez\",\n    \"guestEmail\": \"lisset@test.com\",\n    \"roomNumber\": 101,\n    \"checkInDate\": \"2023-08-10\",\n    \"checkOutDate\": \"2023-08-12\"\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "1291bdc5-99d1-4e55-b2dd-caa6f3d8f22a",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "reservation/:id",
+      "responses": [
+        {
+          "uuid": "cbc8af72-f2cd-40e4-b274-8624b087a71f",
+          "body": "{\n  \"id\": 1,\n  \"guestName\": \"Ivan Lopez\",\n  \"guestEmail\": \"ivan@test.com\",\n  \"roomNumber\": 100,\n  \"checkInDate\": \"2023-08-08\",\n  \"checkOutDate\": \"2023-08-10\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "e8d231ea-a23b-422e-b3a2-413e036fca6e",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "reservation/:id",
+      "responses": [
+        {
+          "uuid": "039c3e15-38dc-4c15-8640-e0a234551e07",
+          "body": "",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "5ea6bce8-b22d-4d46-8342-d6f91e970599",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "reservation/:id",
+      "responses": [
+        {
+          "uuid": "16ddcbfa-da71-4222-9431-0b583c883cd1",
+          "body": "{\n  \"id\": 1,\n  \"guestName\": \"Ivan Lopez\",\n  \"guestEmail\": \"ivan@test.com\",\n  \"roomNumber\": 100,\n  \"checkInDate\": \"2023-08-08\",\n  \"checkOutDate\": \"2023-08-10\"\n}",
+          "latency": 0,
+          "statusCode": 202,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "ce0e8292-f068-4c70-927f-4ec676bca659",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "reservation",
+      "responses": [
+        {
+          "uuid": "40ae236c-f0b8-4f3b-bbbf-0007207bf013",
+          "body": "",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "39cbde7d-4937-4387-8add-62f0f98d3810"
+    },
+    {
+      "type": "route",
+      "uuid": "1291bdc5-99d1-4e55-b2dd-caa6f3d8f22a"
+    },
+    {
+      "type": "route",
+      "uuid": "e8d231ea-a23b-422e-b3a2-413e036fca6e"
+    },
+    {
+      "type": "route",
+      "uuid": "5ea6bce8-b22d-4d46-8342-d6f91e970599"
+    },
+    {
+      "type": "route",
+      "uuid": "ce0e8292-f068-4c70-927f-4ec676bca659"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
